@@ -5,37 +5,96 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="@dimen/paddingGeneral"
     tools:context=".MainActivity">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numero_1_txt"
+        android:layout_marginTop="@dimen/topTxt"
+        android:textSize="@dimen/tamanioLetra" />
+
+    <EditText
+        android:id="@+id/n1_txt"
+        android:hint="@string/numero_1_txt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/mensaje"
-        android:textSize="30sp"
-        android:padding="30dp"
-        android:gravity="center"
-        android:layout_weight="2"
-        android:background="@color/colorPrimaryDark"
-        ></TextView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topTxt"
+        android:inputType="number"></EditText>
+
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numero_2_txt"
+        android:layout_marginTop="@dimen/topTxt"
+        android:textSize="@dimen/tamanioLetra"></TextView>
+
+    <EditText
+        android:id="@+id/n2_txt"
+        android:hint="@string/numero_2_txt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/mensaje2"
-        android:textSize="30sp"
-        android:padding="30dp"
-        android:gravity="center"
-        android:layout_weight="3"
-        android:background="@color/colorAccent"
-        android:textColor="@color/primary_light"
-        ></TextView>
-    <Button
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/topTxt"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/topTxt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:text="@string/saludar_btn"
-        android:background="@color/icons"
-        android:textColor="@color/primary_light"
-        android:textSize="30sp"
-        ></Button>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:minHeight="@dimen/altoBoton"
+            android:id="@+id/sumar_btn"
+            android:onClick="sumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:textColor="@color/primary_light"
+            android:text="+"
+            android:textSize="@dimen/tamanioLetra"></Button>
+
+        <Button
+            android:minHeight="@dimen/altoBoton"
+            android:id="@+id/restar_btn"
+            android:onClick="restar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="-"
+            android:textSize="@dimen/tamanioLetra"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:minHeight="@dimen/altoBoton"
+            android:id="@+id/multiplicar_btn"
+            android:onClick="multiplicar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="*"
+            android:textSize="@dimen/tamanioLetra"></Button>
+
+        <Button
+            android:minHeight="@dimen/altoBoton"
+            android:id="@+id/dividir_btn"
+            android:onClick="dividir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:textColor="@color/primary_light"
+            android:text="/"
+            android:textSize="@dimen/tamanioLetra"></Button>
+    </LinearLayout>
 
 </LinearLayout>
